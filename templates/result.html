@@ -8,22 +8,23 @@
 <body>
 
     <header>
-        <div class="container">
-            <div id="brandname">
-                Neuro-linguistic programming (NLP) with Flask
-            </div>
-        </div>
-        <h2>Optum Spam Detector For Email Messages</h2>
-    </header>
-	<p style="color:blue;font-size:20;text-align: center;"><b>Results for Comment</b></p>
+		<div class="container">
+		<div id="brandname">
+              Natural Language Processing (NLP) with Flask   </div>	
+	</div>
+        <h2>Optum One Assist</h2>
+	</header>
+	
+	<p style="color:blue;font-size:20;text-align: center;"><b>Response team</b></p>
 	<div class="resultss">
 
 
-		
-	{% if prediction == 1%}
-	<h2 style="color:red;">Spam</h2>
+	{% if prediction == 2%}
+	<h2 style="color:red;">Emergency Care Team Call</h2>	
+	{% elif prediction == 1%}
+	<h2 style="color:lawngreen;">Pharmacy Care Team Call</h2>
 	{% elif prediction == 0%}
-	<h2 style="color:lawngreen;">Not a Spam (It is a Ham)</h2>
+	<h2 style="color:orange;">PCP Care team Call</h2>
 	{% endif %}
 
 	</div>
