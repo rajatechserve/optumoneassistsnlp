@@ -27,10 +27,11 @@ header{
 			margin:0px;
 		}
 #brandname{
-	float:left;
+	 
 	font-size:30px;
 	color: #fff;
 	margin: 10px;
+    text-align:center;
 }
 
 header h2{
@@ -53,4 +54,5 @@ header h2{
     padding: 20px; 
     width: 200px;
     height: 150px;
+    position:center
 }
