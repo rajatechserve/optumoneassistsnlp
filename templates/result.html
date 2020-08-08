@@ -1,33 +1,53 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title></title>   
-    <!--<link rel="stylesheet" type="text/css" href="../styles.css">-->
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
-</head>
-<body>
+	<head>
+		<meta charset="utf-8">
+		<title>Optum One Assist</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <header>
-		<div class="container">
-		<div id="brandname">
-              Natural Language Processing (NLP) with Flask   </div>	
-	</div>
-        <h2>Optum One Assist</h2>
-	</header>
+		<!-- MATERIAL DESIGN ICONIC FONT -->
+		<!--<link rel="stylesheet" href="fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">-->
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='fonts/material-design-iconic-font/css/material-design-iconic-font.min.css') }}">
 	
-	<p style="color:blue;font-size:20;text-align: center;"><b>Response team</b></p>
-	<div class="resultss">
+		<!-- STYLE CSS -->
+		<!--<link rel="stylesheet" href="css/style.css">-->
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+	</head>
 
+	<body>
 
-	{% if prediction == 2%}
-	<h2 style="color:red;">Emergency Care Team Call</h2>	
-	{% elif prediction == 1%}
-	<h2 style="color:lawngreen;">Pharmacy Care Team Call</h2>
-	{% elif prediction == 0%}
-	<h2 style="color:orange;">PCP Care team Call</h2>
-	{% endif %}
-
-	</div>
-
-</body>
+		<div class="wrapper">
+			<div class="inner">
+				<form action="{{ url_for('home')}}" method="POST">
+				<img style="display: block;  margin-left: auto;  margin-right: auto;  width: 50%;" src="{{ url_for('static', filename='images/Optum.png') }}">
+					
+					<h3>Optum One Assist</h3>
+                <p>A cost-effective NLP AI solution for health assists for the aging population.</p>				
+					
+					<p>Response team</p>
+					 
+						{% if prediction == 2%}
+						<label class="form-group" >
+                    	 <p style="color:red;font-weight: bold; font-size: 150%">Emergency Care Team Call</p>
+                    	</label>
+                    	{% elif prediction == 1%}
+                    	<label class="form-group" >
+                    	<p style="color:lawngreen;font-weight: bold; font-size: 150%">Pharmacy Care Team Call</p>
+                    	</label>
+                    	{% elif prediction == 0%}
+                    	<label class="form-group" >
+                    	<p style="color:orange;font-weight: bold; font-size: 150%">PCP Care team Call</p>
+                    	</label>
+                    	{% endif %}
+						 
+						<span class="border"></span>
+					 
+					<!-- <button>Back -->
+						<!-- <i class="zmdi zmdi-arrow-left"></i> -->
+					<!-- </button> -->
+				</form>
+			</div>
+		</div>
+		
+	</body>
 </html>

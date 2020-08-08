@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Optum One Assist</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- MATERIAL DESIGN ICONIC FONT -->
+		<!--<link rel="stylesheet" href="fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">-->
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='fonts/material-design-iconic-font/css/material-design-iconic-font.min.css') }}">
+	
+		<!-- STYLE CSS -->
+		<!--<link rel="stylesheet" href="css/style.css">-->
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+	</head>
+
+	<body>
+
+		<div class="wrapper">
+			<div class="inner">
+				<form action="{{ url_for('predict')}}" method="POST">
+				<img style="display: block;  margin-left: auto;  margin-right: auto;  width: 50%;" src="{{ url_for('static', filename='images/Optum.png') }}">
+					<h3>Optum One Assist</h3>
+                <p>A cost-effective NLP AI solution for health assists for the aging population.</p>
+					
+					<label class="form-group" >
+						<textarea name="query" id="" class="form-control" required></textarea>
+						<span for="">Enter Your Query Here</span>
+						<span class="border"></span>
+					</label>
+					<button>Submit 
+						<i class="zmdi zmdi-arrow-right"></i>
+					</button>
+				</form>
+			</div>
+		</div>
+		
+	</body>
+</html>

@@ -54,37 +54,3 @@ header h2{
     width: 200px;
     height: 150px;
 }
-.outer-wrapper{
-
-    max-width: 100%;
-
-      max-height: 100%;
-
-    border: 1px solid black;
-
-    border-radius: 15px 50px 30px 5px;
-
-    background: #faf4ef;
-
-   }
-
-   .frame{  
-
-     max-width: 100%;
-
-      max-height: 100%;
-    }    
-
-    img{
-
-       max-width: 100%;
-
-      max-height: 100%;
-
-       display: block;
-
-       margin: 0 auto;
-
- border-radius: 10px 10px 10px 10px;
-
-    }

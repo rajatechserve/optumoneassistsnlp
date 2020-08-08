@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>   
+    <!--<link rel="stylesheet" type="text/css" href="../styles.css">-->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+    <header>
+		<div class="container">
+		<div id="brandname">
+              Natural Language Processing (NLP) with Flask   </div>	
+	</div>
+        <h2>Optum One Assist</h2>
+	</header>
+	
+	<p style="color:blue;font-size:20;text-align: center;"><b>Response team</b></p>
+	<div class="resultss">
+
+
+	{% if prediction == 2%}
+	<h2 style="color:red;">Emergency Care Team Call</h2>	
+	{% elif prediction == 1%}
+	<h2 style="color:lawngreen;">Pharmacy Care Team Call</h2>
+	{% elif prediction == 0%}
+	<h2 style="color:orange;">PCP Care team Call</h2>
+	{% endif %}
+
+	</div>
+
+</body>
+</html>
